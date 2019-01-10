@@ -14,6 +14,7 @@
 		3D2EB0492127352000221F22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2EB0472127352000221F22 /* LaunchScreen.storyboard */; };
 		3D2EB0542127352000221F22 /* QLC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EB0532127352000221F22 /* QLC_iOSTests.swift */; };
 		3D2EB05F2127352000221F22 /* QLC_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EB05E2127352000221F22 /* QLC_iOSUITests.swift */; };
+		3D854DA621A3ED6200972AE6 /* notice_deadline.py in Resources */ = {isa = PBXBuildFile; fileRef = 3D854DA521A3ED6200972AE6 /* notice_deadline.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3D2EB05A2127352000221F22 /* QLC-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QLC-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2EB05E2127352000221F22 /* QLC_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLC_iOSUITests.swift; sourceTree = "<group>"; };
 		3D2EB0602127352000221F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D854DA521A3ED6200972AE6 /* notice_deadline.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = notice_deadline.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				3D2EB0452127352000221F22 /* Assets.xcassets */,
 				3D2EB0472127352000221F22 /* LaunchScreen.storyboard */,
 				3D2EB04A2127352000221F22 /* Info.plist */,
+				3D854DA521A3ED6200972AE6 /* notice_deadline.py */,
 			);
 			path = "QLC-iOS";
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 				3D2EB0372127351F00221F22 /* Sources */,
 				3D2EB0382127351F00221F22 /* Frameworks */,
 				3D2EB0392127351F00221F22 /* Resources */,
+				3D854DA321A3EAB900972AE6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D854DA621A3ED6200972AE6 /* notice_deadline.py in Resources */,
 				3D2EB0492127352000221F22 /* LaunchScreen.storyboard in Resources */,
 				3D2EB0462127352000221F22 /* Assets.xcassets in Resources */,
 				3D2EB0442127351F00221F22 /* Main.storyboard in Resources */,
@@ -250,6 +255,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D854DA321A3EAB900972AE6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\neval \"$(pyenv init -)\"\nexport LANG=ja_JP.UTF-8\npython /Users/saitoy55/git/QLC-iOS/QLC-iOS/QLC-iOS/notice_deadline.py\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D2EB0372127351F00221F22 /* Sources */ = {
