@@ -64,6 +64,11 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         let urlRequest = URLRequest(url: (kankoreUrl)!)
         self.webView.load(urlRequest)
         
+        // edge protect?
+        if #available(iOS 11.0, *){
+            setNeedsUpdateOfScreenEdgesDeferringSystemGestures()
+        }
+        
         print("load start")
         
     }
@@ -119,6 +124,11 @@ class WebViewController: UIViewController, WKNavigationDelegate {
                 webView.evaluateJavaScript(self.kcScript, completionHandler: nil)
             }
         }
+    }
+    
+    // edge protect
+    override func preferredScreenEdgesDeferringSystemGestures() -> UIRectEdge {
+        return .bottom
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
